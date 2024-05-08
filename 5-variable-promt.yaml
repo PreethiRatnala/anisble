@@ -1,7 +1,12 @@
 - name: variable
   hosts: localhost
-  vars_files: #variable defined file
-    -var.yaml
+  vars_prompt:  
+    - name: USERNAME
+      prompt: please enter username
+      private: false
+    - name: USERNAME
+      prompt: please enter username
+      private: false
   tasks:
     - name: print variables
       vars:
