@@ -4,9 +4,9 @@
     - name: USERNAME
       prompt: please enter username
       private: false
-    - name: USERNAME
+    - name: PASSWORD
       prompt: please enter username
-      private: false
+      private: true
   tasks:
     - name: print variables
       vars:
