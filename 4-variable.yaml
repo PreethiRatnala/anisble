@@ -5,6 +5,6 @@
     trainer: "siva"
     duration: "120hr"
   tasks:
-    name: print variables
-    ansible.builtin.debug:
-     msg: "my cpurse is {{course}}. my couch is {{trainer}}. time duration is {{duration}}"
+    - name: print variables
+      ansible.builtin.debug:
+        msg: "my cpurse is {{course}}. my couch is {{trainer}}. time duration is {{duration}}"
