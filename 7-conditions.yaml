@@ -5,6 +5,7 @@
     number: 5
   tasks:
   - name: print condition
+  ansible.builtin.debug:
     msg: "my course is devops"
     msg: "entered number {{number}}"
-    when: number | int>0
+  when: number | int>0
