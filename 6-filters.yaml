@@ -1,0 +1,8 @@
+- name: filters
+  hosts: localhost
+  vars:
+    ages: [25,35,45]
+  tasks:
+  - name: print min and max
+    ansible.builtin.debug:
+      msg: "min age {{ age | min }}, max age {{ age | max }}"
