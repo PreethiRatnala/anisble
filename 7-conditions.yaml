@@ -2,12 +2,13 @@
   hosts: localhost
   vars:
     course: "devops"
-    number: 5
   tasks:
     - name: print condition
-    ansible.builtin.debug:
-      msg: "my course is {{course}}"
-    when: number | int>0
+      vars:     
+        number: 5
+      ansible.builtin.debug:
+        msg: "my course is {{ course }}"
+    when: number | int > 0
     - name: print number
-    ansible.builtin.debug:
-      msg: "entered number {{number}}"
+      ansible.builtin.debug:
+        msg: "entered number {{ number }}"
