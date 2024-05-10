@@ -1,0 +1,12 @@
+- name: command vs shell
+  hosts: localhost
+  tasks:
+    - name: command module
+      ansible.builtin.command: "echo 'hit this is the module command' > /tmp/command.txt "
+
+    - name: command module
+      ansible.builtin.shell: "echo 'hit this is the module command' > /tmp/shell.txt "
+
+
+# simple commands without the need of shell variable, environments and features like redirrections, pipes and go for command module
+      
